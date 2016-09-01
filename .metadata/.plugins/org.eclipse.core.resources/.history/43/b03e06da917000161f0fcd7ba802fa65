@@ -31,11 +31,6 @@ public class Calculate {
 	public static int toImproperFrac(int x, int y, int z){
 		return ((x*z+y)/z);
 	
-	public static int toMixedNum(int x, int y){
-		return (do the remaind module thing)
-	}
-	
-	public static int foil(int w, int x, int y, int z, String n){
-		return ((int w * int y)(n*n) + ((w*z)+(y*z)) + (x*y))
+	public static 
 	}
 }
