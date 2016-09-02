@@ -16,26 +16,72 @@ public class Calculate {
 		return (x+y+z)/3;
 	}
 	
-	public static int toDegrees(int x){
+	public static double toDegrees(double x){
 		return (x*(180/3.14159));
 	}
 	
-	public static int toRadians(int x){
+	public static double toRadians(double x){
 		return (x*(3.141519/180));
 	}
 	
-	public static int discriminant(int x, int y, int z){
-		return (b*b - 4ac);
+	public static int discriminant(int a, int b, int c){
+		return ((b*b) - 4(ac));
 	}
 	
 	public static int toImproperFrac(int x, int y, int z){
 		return ((x*z+y)/z);
-	
-	public static int toMixedNum(int x, int y){
-		return (do the remaind module thing)
 	}
 	
-	public static int foil(int w, int x, int y, int z, String n){
+	public static int toMixedNum(int x, int y){
+		return (x/y +  "_" + x%y + "/" + y);
+	}
+	
+	public static int foil(int w, int x, int y, int z, int n){
 		return ((int w * int y)(n*n) + ((w*z)+(y*z)) + (x*y))
+	}
+	
+	public static int isDivisibleBy(int x, int y){
+		return (x%y == 0);
+	}
+	
+	public static double absValue(double x){
+		return abs(x);
+	}
+	
+	public static int max(int x, int y){
+		if (x>y){
+			return x;
+		}else{
+			return y;
+		}
+	}
+	
+	public static double max(double x, double y, double z){
+		if (x>y && x>z){
+			return x;
+		}
+		if (y>x && y>z){
+			return y;
+		}else{
+			return z;
+		}
+	}
+	
+	public static int min(int x, int y){
+		if (x<y){
+			return x;
+		}else{
+			return y;
+		}
+	}
+	
+	public static double round2(double x, double y, double z){
+		if (z>=5){
+			z = 0;
+			y = y+1;
+		}
+		return (x + "." + y + z);
+			
+		}
 	}
 }
