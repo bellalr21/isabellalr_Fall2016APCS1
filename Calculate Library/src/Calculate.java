@@ -75,13 +75,29 @@ public class Calculate {
 		}
 	}
 	
-	public static double round2(double x, double y, double z){
-		if (z>=5){
-			z = 0;
-			y = y+1;
+	public static double round2(double x){
+		x = x * 100;
+		make x an integer
+		x = x/100;
+	}
+	
+	public static double exponent(double x, int y){
+		for(i = 1; i <= y; i++){
+			x = x * x;
 		}
-		return x + "." + y + z;
-			
+	}	
+	
+	public static int factorial(int x){
+		int i = 1;
+		while(i <= x){
+			x = x * (x);
+			i++;
 		}
 	}
+	
+	public static int isPrime(int x){
+		
+	}
+	
+	public static 
 }
