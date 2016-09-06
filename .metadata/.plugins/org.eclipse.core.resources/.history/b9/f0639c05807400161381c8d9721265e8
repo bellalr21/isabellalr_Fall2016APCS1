@@ -82,10 +82,8 @@ public class Calculate {
 	}
 	
 	public static double exponent(double x, int y){
-		int i = 1;
-		while(i <= y){
+		for(i = 1; i <= y; i++){
 			x = x * x;
-			i++;
 		}
 	}	
 	
@@ -101,5 +99,5 @@ public class Calculate {
 		
 	}
 	
-	public static p
+	public static 
 }
