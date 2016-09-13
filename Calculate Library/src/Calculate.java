@@ -1,6 +1,6 @@
 
 public class Calculate {
-	public static int square(int x){
+	public static double square(double x){
 		return x*x;
 	}
 
@@ -82,24 +82,37 @@ public class Calculate {
 	}
 	
 	public static double exponent(double x, int y){
-		int i = 1;
-		while(i <= y){
-			x = x * x;
-			i++;
+		int value = 1;
+		for (int i = 1; i <= y; i++){
+			value *= x;
 		}
+		return value;
 	}	
 	
 	public static int factorial(int x){
-		int i = 1;
-		while(i <= x){
-			x = x * (x);
-			i++;
+		if (x < 0){
+			throw new IllegalArgumentException("negative x: " + x);
 		}
+		int product = 1;
+		for (int i = 2; i <= x; i++){
+			product = product * i;		
+		}
+		return product;
 	}
 	
-	public static int isPrime(int x){
+	public static boolean isPrime(int x){
+		for (int i = 2; i <= x; i++){
+			if(Calculate.isDivisibleBy(x, i)){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static int gcf(int x, int y){
 		
 	}
 	
-	public static p
-}
+	public static int sqrt(iny x){
+	}
+	}
