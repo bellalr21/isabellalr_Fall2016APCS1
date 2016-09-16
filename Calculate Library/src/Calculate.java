@@ -1,6 +1,6 @@
 
 public class Calculate {
-	public static double square(double x){
+	public static int square(int x){
 		return x*x;
 	}
 
@@ -76,9 +76,10 @@ public class Calculate {
 	}
 	
 	public static double round2(double x){
-		x = x * 100;
-		make x an integer
-		x = x/100;
+		x *= 100;
+		x = (int) x;
+		x = x/100.0;
+		return x;
 	}
 	
 	public static double exponent(double x, int y){
@@ -108,11 +109,13 @@ public class Calculate {
 		}
 		return true;
 	}
-	
+	/*
 	public static int gcf(int x, int y){
 		
 	}
 	
 	public static int sqrt(iny x){
 	}
+	*/
+	
 	}
