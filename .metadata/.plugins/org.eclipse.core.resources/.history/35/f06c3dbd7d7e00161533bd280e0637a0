@@ -1,11 +1,11 @@
 
 public class Calculate {
 	public static int square(int x){
-		return (x*x);
+		return x*x;
 	}
 
 	public static int cube(int x){
-		return (x*x*x);
+		return x*x*x;
 	}
 	
 	public static int average(int x, int y){
@@ -109,22 +109,12 @@ public class Calculate {
 		}
 		return true;
 	}
-	
+	/*
 	public static int gcf(int x, int y){
-		int min = Calculate.min(x, y);
-		int max = Calculate.max(x, y);
-		int i =1;
-		for(i = 1; max >= 1; i--){
-			int result1 = max % i;
-			int result2 = min % i;
-			if(result1 == 0 && result2 == 0){
-				return i;
-			}
-		}
+		
 	}
 	
-	/*
-	public static int sqrt(int x){
+	public static int sqrt(iny x){
 	}
 	*/
 	

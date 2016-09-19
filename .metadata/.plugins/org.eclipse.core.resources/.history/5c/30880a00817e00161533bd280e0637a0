@@ -123,7 +123,6 @@ public class Calculate {
 		}
 	}
 	
-	/*
 	public static int sqrt(int x){
 	}
 	*/
