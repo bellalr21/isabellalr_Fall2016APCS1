@@ -11,7 +11,7 @@ public class DoMath {
 		System.out.println(Calculate.toImproperFrac(3, 4, 7));
 		System.out.println(Calculate.toMixedNum(4, 9));
 		System.out.println(Calculate.isDivisibleBy(10, 5));
-		System.out.println(Calculate.absValue(-10));
+		System.out.println(Calculate.absValue(10));
 		System.out.println(Calculate.max(10, 15));
 		System.out.println(Calculate.max(10, 15, 20));
 		System.out.println(Calculate.min(10, 15));
