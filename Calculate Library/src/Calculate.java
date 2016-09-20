@@ -127,7 +127,15 @@ public class Calculate {
 	
 	
 	public static int sqrt(int x){
-	1/2(
+		for(int i = 1; (i*i) <= x; i++){
+			closestSquare = Calculate.square(i);
+			nextSquare = Calculate.square(i+1);
+		}
+		Subtraction1 = x - closestSquare;
+		Subtraction2 = nextSquare - x;
+		
+		
+		
 	}
 	*/
 	

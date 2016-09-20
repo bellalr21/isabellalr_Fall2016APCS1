@@ -1,11 +1,11 @@
 
 public class Calculate {
-	public static double square(double x){
-		return x*x;
+	public static int square(int x){
+		return (x*x);
 	}
 
 	public static int cube(int x){
-		return x*x*x;
+		return (x*x*x);
 	}
 	
 	public static int average(int x, int y){
@@ -45,7 +45,11 @@ public class Calculate {
 	}
 	
 	public static double absValue(double x){
-		return absValue(x);
+		if(x < 0){
+			return (x * -1);
+		}else{
+			return x;
+		}
 	}
 	
 	public static int max(int x, int y){
@@ -76,9 +80,10 @@ public class Calculate {
 	}
 	
 	public static double round2(double x){
-		x = x * 100;
-		make x an integer
-		x = x/100;
+		x *= 100;
+		x = (int) x;
+		x = x/100.0;
+		return x;
 	}
 	
 	public static double exponent(double x, int y){
@@ -101,7 +106,7 @@ public class Calculate {
 	}
 	
 	public static boolean isPrime(int x){
-		for (int i = 2; i <= x; i++){
+		for (int i = 2; i < x; i++){
 			if(Calculate.isDivisibleBy(x, i)){
 				return false;
 			}
@@ -109,10 +114,21 @@ public class Calculate {
 		return true;
 	}
 	
+	/*
 	public static int gcf(int x, int y){
-		
+		int minNum = Calculate.min(x, y);
+		int maxNum = Calculate.max(x, y);
+		for(int i = minNum; minNum >= 1; i--){
+			if(calculate.isDivisibleBy(maxNum, i){
+				return i;
+			}
+		}
 	}
 	
-	public static int sqrt(iny x){
+	
+	public static int sqrt(int x){
+	1/2(
 	}
+	*/
+	
 	}
