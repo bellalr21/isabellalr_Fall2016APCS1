@@ -114,34 +114,29 @@ public class Calculate {
 		return true;
 	}
 	
-
+	/*
 	public static int gcf(int x, int y){
 		int minNum = Calculate.min(x, y);
 		int maxNum = Calculate.max(x, y);
 		for(int i = minNum; minNum >= 1; i--){
-			if(Calculate.isDivisibleBy(maxNum, i)){
+			if(calculate.isDivisibleBy(maxNum, i){
 				return i;
 			}
-		} 
+		}
 	}
-	
 	
 	
 	public static int sqrt(int x){
 		for(int i = 1; (i*i) <= x; i++){
-			int closestSquare1 = Calculate.square(i);
-			int closestSquare2 = Calculate.square(i+1);
+			closestSquare = Calculate.square(i);
+			nextSquare = Calculate.square(i+1);
 		}
-		double subtraction1 = x - closestSquare1;
-		double subtraction2 = closestSquare2 - x;
-		int result = Calculate.min(subtraction1, subtraction2);
-		if(result == subtraction1){
-			closestSquare = closestSquare1;
-		}else{
-			closestSquare = closestSquare2;
-		}
-		return closestSquare
+		Subtraction1 = x - closestSquare;
+		Subtraction2 = nextSquare - x;
+		
+		
+		
 	}
-	
+	*/
 	
 	}
