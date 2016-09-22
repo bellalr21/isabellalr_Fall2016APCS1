@@ -119,7 +119,7 @@ public class Calculate {
 		int minNum = Calculate.min(x, y);
 		int maxNum = Calculate.max(x, y);
 		for(int i = minNum; minNum > 1; i--){
-			if(Calculate.isDivisibleBy(maxNum, i) && Calculate.isDivisibleBy(minNum, i)){
+			if(Calculate.isDivisibleBy(maxNum, i)){
 				return i;
 			}
 		} 
