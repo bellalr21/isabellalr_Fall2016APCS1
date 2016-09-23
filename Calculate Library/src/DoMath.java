@@ -20,10 +20,6 @@ public class DoMath {
 		System.out.println(Calculate.factorial(4));
 		System.out.println(Calculate.isPrime(15));
 		System.out.println(Calculate.gcf(15, 320));
+		System.out.println(Calculate.sqrt(49));
 	}
 }
-
-/*
-System.out.println(Calculate.foil(4, 9, 5, 2, x));
-System.out.println(Calculate.absValue(10));
-*/

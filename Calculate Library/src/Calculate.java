@@ -41,6 +41,9 @@ public class Calculate {
 	}
 	
 	public static boolean isDivisibleBy(int x, int y){
+		if (x == 0){
+			throw new IllegalArgumentException("divisor: " + x);
+		}
 		return (x % y == 0);
 	}
 	
@@ -88,6 +91,9 @@ public class Calculate {
 	
 	public static double exponent(double x, int y){
 		int value = 1;
+		if (y < 0){
+			throw new IllegalArgumentException("negative y: " + y);
+		}
 		for (int i = 1; i <= y; i++){
 			value *= x;
 		}
@@ -124,27 +130,18 @@ public class Calculate {
 			}
 		} 
 		return (1);
-	}
+	}	
 	
+	public static double sqrt(int x){
+		if (x < 0){
+			throw new IllegalArgumentException("negative x: " + x);
+		}
+		for(double i = 0.1; i <= x; i += 0.1){
+			double multiply = i*i;
+			if (Calculate.absValue(multiply-x) <= 0.1){
+				return Calculate.round2(i);
+			} 
+		}
+		return x;
+	}
 }
-/*	
-	
-	public static int sqrt(int x){
-		for(int i = 1; (i*i) <= x; i++){
-			int closestSquare1 = Calculate.square(i);
-			int closestSquare2 = Calculate.square(i+1);
-		}
-		double subtraction1 = x - closestSquare1;
-		double subtraction2 = closestSquare2 - x;
-		int result = Calculate.min(subtraction1, subtraction2);
-		if(result == subtraction1){
-			closestSquare = closestSquare1;
-		}else{
-			closestSquare = closestSquare2;
-		}
-		return closestSquare
-	}
-	
-	
-	}
-*/
