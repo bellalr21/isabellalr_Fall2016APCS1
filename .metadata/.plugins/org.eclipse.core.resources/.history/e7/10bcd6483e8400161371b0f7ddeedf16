@@ -24,7 +24,7 @@ public class Calculate {
 		return (x*(3.141519/180));
 	}
 	
-	public static double discriminant(int a, int b, int c){
+	public static int discriminant(int a, int b, int c){
 		return ((b*b) - (4 *a*c));
 	}
 	
@@ -42,7 +42,7 @@ public class Calculate {
 	
 	public static boolean isDivisibleBy(int x, int y){
 		if (x == 0){
-			throw new IllegalArgumentException("Cannot divide by zero.");
+			throw new IllegalArgumentException("divisor: " + x);
 		}
 		return (x % y == 0);
 	}
@@ -92,17 +92,17 @@ public class Calculate {
 	public static double exponent(double x, int y){
 		int value = 1;
 		if (y < 0){
-			throw new IllegalArgumentException("Cannot be a negative number.");
+			throw new IllegalArgumentException("negative y: " + y);
 		}
 		for (int i = 1; i <= y; i++){
 			value *= x;
 		}
 		return value;
-	}
+	}	
 	
 	public static int factorial(int x){
 		if (x < 0){
-			throw new IllegalArgumentException("Cannot be a negative number.");
+			throw new IllegalArgumentException("negative x: " + x);
 		}
 		int product = 1;
 		for (int i = 2; i <= x; i++){
@@ -134,7 +134,7 @@ public class Calculate {
 	
 	public static double sqrt(int x){
 		if (x < 0){
-			throw new IllegalArgumentException("Cannot be a negative number.");
+			throw new IllegalArgumentException("negative x: " + x);
 		}
 		for(double i = 0.1; i <= x; i += 0.1){
 			double multiply = i*i;
@@ -146,25 +146,7 @@ public class Calculate {
 	}
 	
 	public static String quadForm(int a, int b, int c){
-	
-		double firstRoot;
-		double secondRoot;
-		double discrim = Calculate.discriminant(a, b, c);
-		if(discrim < 0){
-			return("no real roots");
-		}else if (discrim >= 0){
-			double answer1 = Calculate.round2((-b + Math.sqrt(discrim))/(2*a));
-			double answer2 = Calculate.round2((-b - Math.sqrt(discrim))/(2*a));
-			if(answer1 < answer2){
-				firstRoot = answer1;
-				secondRoot = answer2;
-			}else{
-				firstRoot = answer2;
-				secondRoot = answer1;
-			}
-			return (firstRoot + " and " + secondRoot);
-		}
-		return ("");
-		
+		double discriminant = Calculate.discriminant((b*b) - (4 *a*c));
+		if(disc)
 	}
 }

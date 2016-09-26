@@ -146,25 +146,20 @@ public class Calculate {
 	}
 	
 	public static String quadForm(int a, int b, int c){
-	
-		double firstRoot;
-		double secondRoot;
+		System.out.println( "a=" +a+"b="+b+"c="+c);
+		/*
 		double discrim = Calculate.discriminant(a, b, c);
 		if(discrim < 0){
 			return("no real roots");
-		}else if (discrim >= 0){
-			double answer1 = Calculate.round2((-b + Math.sqrt(discrim))/(2*a));
-			double answer2 = Calculate.round2((-b - Math.sqrt(discrim))/(2*a));
-			if(answer1 < answer2){
-				firstRoot = answer1;
-				secondRoot = answer2;
-			}else{
-				firstRoot = answer2;
-				secondRoot = answer1;
-			}
+		}else if (discrim == 0){
+			double answer1 = Calculate.round2((-b + Calculate.sqrt(discrim))/(2*a));
+			double answer2 = Calculate.round2((-b - Calculate.sqrt(discrim))/(2*a));
+			double firstRoot = Calculate.min(answer1, answer2);
+			double secondRoot = Calculate.max(answer1, answer2);
 			return (firstRoot + " and " + secondRoot);
 		}
-		return ("");
+	*/
+		return ( "a=" +a+"b="+b+"c="+c);
 		
 	}
 }

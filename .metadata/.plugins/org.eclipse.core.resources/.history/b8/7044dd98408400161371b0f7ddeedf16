@@ -55,7 +55,7 @@ public class Calculate {
 		}
 	}
 	
-	public static int max(int x, int y){
+	public static double max(int x, int y){
 		if (x>y){
 			return x;
 		}else{
@@ -152,7 +152,7 @@ public class Calculate {
 		double discrim = Calculate.discriminant(a, b, c);
 		if(discrim < 0){
 			return("no real roots");
-		}else if (discrim >= 0){
+		}else if (discrim == 0){
 			double answer1 = Calculate.round2((-b + Math.sqrt(discrim))/(2*a));
 			double answer2 = Calculate.round2((-b - Math.sqrt(discrim))/(2*a));
 			if(answer1 < answer2){
