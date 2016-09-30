@@ -1,0 +1,33 @@
+import java.util.*;
+public class CollaborativeProgramProcessing {
+	public static void main(String args[]){
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("How many numbers?");
+		int numTerms = userInput.nextInt();
+		System.out.println(numTerms);
+		int min = 0;
+		int max = 0;
+		int sumOfEvenNums = 0;
+		int maxOfEvenNums = 0;
+		for (int i = 1; i <= numTerms; i++){
+			System.out.println("Pick a number.");
+			int nextNum = userInput.nextInt();
+			if(nextNum > max){
+				max = nextNum;
+				}else{
+				if(nextNum < min){
+					min = nextNum;
+				}
+				if(nextNum % 2 == 0){
+					sumOfEvenNums += nextNum;
+				}
+				if(nextNum > maxOfEvenNums){
+					maxOfEvenNums = nextNum;
+				}
+			}
+			System.out.println("The smallest number is " + min + 
+			", the largest number is " + max + ", the sum of the even numbers is " + 
+			sumOfEvenNums + ", the largest even number is " + maxOfEvenNums);
+		}
+	}
+}
