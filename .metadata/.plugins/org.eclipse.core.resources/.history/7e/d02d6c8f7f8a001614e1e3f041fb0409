@@ -62,15 +62,14 @@ public class CollaborativeProgramProcessing {
 					maxOfEvenNums = nextNums;
 				}
 			}
-			if(nextNums == 0){
-				boolean zeroInTerms = true;
-			}
 		}
 		System.out.println("The smallest number is " + min + 
 				", the largest number is " + max + ", the sum of the even numbers is " + 
-				sumOfEvenNums + ", the largest even number is " + maxOfEvenNums + ".");
-		if(sumOfEvenNums == 0 && maxOfEvenNums == 0 && zeroInTerms = false){
-			System.out.print("There is no max even number");
+				sumOfEvenNums);
+		if(maxOfEvenNums != 0 && sumOfEvenNums == 0){
+			System.out.print("There is no largest even number because you inputed no even numbers.");
+		}else{
+			System.out.print("The largest even number is " + maxOfEvenNums);
 		}
 	}
 }

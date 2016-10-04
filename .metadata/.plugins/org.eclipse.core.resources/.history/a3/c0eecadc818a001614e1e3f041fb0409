@@ -39,7 +39,7 @@ public class Calculate {
 		if (x>0){
 			return ((x*z+y) + "/" + z);
 		}else{
-			return (((-1 * x)*z+y) + "/" + z);
+			return (((-x)*z+y) + "/" + z);
 		}
 	}
 	

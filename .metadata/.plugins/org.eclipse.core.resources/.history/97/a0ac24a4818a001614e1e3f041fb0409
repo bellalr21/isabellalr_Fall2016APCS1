@@ -36,11 +36,7 @@ public class Calculate {
 	}
 	
 	public static String toImproperFrac(int x, int y, int z){
-		if (x>0){
-			return ((x*z+y) + "/" + z);
-		}else{
-			return (((-1 * x)*z+y) + "/" + z);
-		}
+		return (x*z+y) + "/" + z;
 	}
 	
 	public static String toMixedNum(int x, int y){
