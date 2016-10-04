@@ -1,5 +1,12 @@
-
+/*
+ * @author APCS1 Isabella Lee-Rubio
+ * 10/4/16
+ * This class implements a variety of basic math methods to complex math methods.
+ */
 public class Calculate {
+	/* 
+	 * Part 1 of the class covers methods, headers, and basic math.
+	 */
 	public static int square(int x){
 		return (x*x);
 	}
@@ -8,11 +15,11 @@ public class Calculate {
 		return (x*x*x);
 	}
 	
-	public static int average(int x, int y){
+	public static double average(double x, double y){
 		return (x+y)/2;
 	}
 	
-	public static int average(int x, int y, int z){
+	public static double average(double x, double y, double z){
 		return (x+y+z)/3;
 	}
 	
@@ -24,12 +31,12 @@ public class Calculate {
 		return (x*(3.141519/180));
 	}
 	
-	public static double discriminant(int a, int b, int c){
+	public static double discriminant(double a, double b, double c){
 		return ((b*b) - (4 *a*c));
 	}
 	
-	public static int toImproperFrac(int x, int y, int z){
-		return ((x*z+y)/z);
+	public static String toImproperFrac(int x, int y, int z){
+		return (x*z+y) + "/" + z;
 	}
 	
 	public static String toMixedNum(int x, int y){
@@ -37,9 +44,12 @@ public class Calculate {
 	}
 	
 	public static String foil(int a, int b, int c, int d, String variable){
-		return ((a*b) + variable+"^2 + " + (a*d + b*c) + variable + (b*d));
+		return ((a*c) + variable+"^2 + " + (a*d + b*c) + variable + " " + "+" + " " + (b*d));
 	}
 	
+	/*
+	 * Part 2 covers methods with conditionals.
+	 */
 	public static boolean isDivisibleBy(int x, int y){
 		if (x == 0){
 			throw new IllegalArgumentException("Cannot divide by zero.");
@@ -89,6 +99,9 @@ public class Calculate {
 		return x;
 	}
 	
+	/*
+	 * Part 3 covers methods that use loops and calls to other methods.
+	 */
 	public static double exponent(double x, int y){
 		int value = 1;
 		if (y < 0){
@@ -132,7 +145,7 @@ public class Calculate {
 		return (1);
 	}	
 	
-	public static double sqrt(int x){
+	public static double sqrt(double x){
 		if (x < 0){
 			throw new IllegalArgumentException("Cannot be a negative number.");
 		}
@@ -144,6 +157,16 @@ public class Calculate {
 		}
 		return x;
 	}
+	
+	/*
+	 * After implementing exceptions throughout the class, I made a method called quadForm.
+	 * Quadform uses the coefficients of a quadratic equation in standard form and uses the 
+	 * quadratic formula to determine the real roots. If the discriminant is less than zero, 
+	 * the method returns a String that says no real roots. If there is a repeated root,
+	 * the method returns the single value rounded to 2 decimal places. If there are two
+	 * real roots, the method returns a String that returns the smaller of the two roots first 
+	 * and the larger root separated by the word "and".
+	 */
 	
 	public static String quadForm(int a, int b, int c){
 	
