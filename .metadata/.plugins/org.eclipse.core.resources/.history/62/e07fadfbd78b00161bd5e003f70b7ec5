@@ -63,9 +63,6 @@ public class CollaborativeProgramProcessing {
 				}
 			}
 		}
-		/*
-		 * Prints out the values on min, max, sumOfEvenNums, and maxOfEvenNums
-		 */
 		System.out.println("The smallest number is " + min + 
 				", the largest number is " + max + ", the sum of the even numbers is " + 
 				sumOfEvenNums + ", the largest even number is " + maxOfEvenNums + ".");
