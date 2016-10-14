@@ -16,6 +16,7 @@ public class Magpie2 {
 		statement = statement.trim();
 		if (statement.length() == 0){
 			response = "Say something, please.";
+			return response;
 		}
 		if (statement.indexOf("no") >= 0) {
 			response = "Why so negative?";
