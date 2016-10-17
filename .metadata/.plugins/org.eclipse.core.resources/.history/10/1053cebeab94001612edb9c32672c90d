@@ -31,20 +31,20 @@ public class Magpie3 {
 		}
 		if (statement.indexOf("no") >= 0) {
 			response = "Why so negative?";
-		} else if (findKeyword(statement, "mother") >=0
-				|| findKeyword(statement, "father") >=0
-				|| findKeyword(statement, "sister") >=0
-				|| findKeyword(statement, "brother") >=0) {
+		} else if (statement.findKeyword("She's my mother", "mother", 0)
+				|| statement.indexOf("father") >= 0
+				|| statement.indexOf("sister") >= 0
+				|| statement.indexOf("brother") >= 0) {
 			response = "Tell me more about your family.";
-		} else if (findKeyword(statement, "love") >=0
-				|| findKeyword(statement, "happy") >=0
-				|| findKeyword(statement, "smile") >=0) {
+		} else if (statement.indexOf("love") >= 0
+				|| statement.indexOf("happy") >= 0
+				|| statement.indexOf("smile") >= 0) {
 			response = "You seem to be in a good mood.";
-		} else if (findKeyword(statement, "Ms. Dreyer") >=0
-				|| findKeyword(statement, "Ms. Ronina") >=0
-				|| findKeyword(statement, "Mr. Lira") >=0
-				|| findKeyword(statement, "Ms. Michot") >=0
-				||findKeyword(statement, "Mr. Jackson") >=0) {
+		} else if (statement.indexOf("Ms. Dreyer") >= 0
+				|| statement.indexOf("Ms. Ronina") >= 0
+				|| statement.indexOf("Mr. Lira") >= 0
+				|| statement.indexOf("Ms. Michot") >= 0
+				|| statement.indexOf("Mr. Jackson") >= 0) {
 			response = "Sounds like a good teacher.";
 		} else {
 			response = getRandomResponse();

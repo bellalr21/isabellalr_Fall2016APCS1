@@ -54,8 +54,6 @@ public class Magpie4 {
 		// Responses which require transformations
 		else if (findKeyword(statement, "I want to", 0) >= 0) {
 			response = transformIWantToStatement(statement);
-		}else if (findKeyword(statement, "I want", 0) >= 0) {
-			response = transformIWantStatement(statement);
 		} else {
 			// Look for a two word (you <something> me)
 			// pattern
@@ -63,8 +61,6 @@ public class Magpie4 {
 
 			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0) {
 				response = transformYouMeStatement(statement);
-			}else if (psn >= 0 && findKeyword(statement, "you", psn) >= 0) {
-				response = transformIYouStatement(statement);
 			} else {
 				response = getRandomResponse();
 			}
@@ -91,19 +87,6 @@ public class Magpie4 {
 		String restOfStatement = statement.substring(psn + 9).trim();
 		return "What would it mean to " + restOfStatement + "?";
 	}
-	
-	private String transformIWantStatement(String statement) {
-		// Remove the final period, if there is one
-		statement = statement.trim();
-		String lastChar = statement.substring(statement.length() - 1);
-		if (lastChar.equals(".")) {
-			statement = statement.substring(0, statement.length() - 1);
-		}
-		int psn = findKeyword(statement, "I want", 0);
-		String restOfStatement = statement.substring(psn + 7).trim();
-		return "Would you really be happy if you had " + restOfStatement + "?";
-	}
-
 
 	/**
 	 * Take a statement with "you <something> me" and transform it into
@@ -127,21 +110,6 @@ public class Magpie4 {
 		String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe)
 				.trim();
 		return "What makes you think that I " + restOfStatement + " you?";
-	}
-	
-	private String transformIYouStatement(String statement) {
-		// Remove the final period, if there is one
-		statement = statement.trim();
-		String lastChar = statement.substring(statement.length() - 1);
-		if (lastChar.equals(".")) {
-			statement = statement.substring(0, statement.length() - 1);
-		}
-
-		int psnOfI = findKeyword(statement, "I", 0);
-		int psnOfYou = findKeyword(statement, "you", psnOfI + 1);
-
-		String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
-		return "Why do you " + restOfStatement + " me?";
 	}
 
 	/**
@@ -209,27 +177,7 @@ public class Magpie4 {
 	 */
 	private String getRandomResponse() {
 		
-	// Paste part 3 code here	
-		final int NUMBER_OF_RESPONSES = 6;
-		double r = Math.random();
-		int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
-		String response = "";
+		// Paste part 3 code here	
+	}
 
-		if (whichResponse == 0) {
-			response = "Interesting, tell me more.";
-		} else if (whichResponse == 1) {
-			response = "Hmmm.";
-		} else if (whichResponse == 2) {
-			response = "Do you really think so?";
-		} else if (whichResponse == 3) {
-			response = "You don't say.";
-		} else if (whichResponse == 4) {
-			response = "I don't care.";
-		} else if (whichResponse == 5) {
-			response = "What does that mean?";
-			}
-
-			return response;
-		}
-		
 }
