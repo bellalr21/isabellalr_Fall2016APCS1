@@ -163,6 +163,7 @@ public class Calculate {
 		return x;
 	}
 	
+	
 	/*
 	 * After implementing exceptions throughout the class, I made a method called quadForm.
 	 * Quadform uses the coefficients of a quadratic equation in standard form and uses the 
