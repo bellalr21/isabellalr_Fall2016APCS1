@@ -157,8 +157,8 @@ public class Calculate {
 	/*
 	 * Finds the exponent of a number.
 	 */
-	public static double exponent(double base, double exponent){
-		double value = 1;
+	public static double exponent(int base, int exponent){
+		int value = 1;
 		if (exponent < 0){
 			throw new IllegalArgumentException("Cannot be a negative number.");
 		}
