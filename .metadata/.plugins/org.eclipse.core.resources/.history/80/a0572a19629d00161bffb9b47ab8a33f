@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Split 
@@ -16,8 +15,7 @@ public class Split
 		//		it will split at the word "really" and return an array of ["I "," like "," apples!"]
 		
 		//play around with String.split! what happens if you "I reallyreally like apples".split("really") ?
-		System.out.println(Arrays.toString("I like apples!".split(" ")));
-		System.out.println(Arrays.toString("I really like really red apples".split("really")));
+		
 		
 		//Your task:
 		/*Write a method that take in a string like "applespineapplesbreadlettustomatobaconmayohambreadcheese" describing a sandwich
@@ -31,41 +29,20 @@ public class Split
 		String ingredients = userInput.nextLine();
 		
 		//Splits list of ingredients to get outside and middle of sandwich. Also gets index of "bread". 
-		String [] newIngredients = ingredients.split("bread");
+		String [] newList = ingredients.split("bread");
 		int breadIndex = ingredients.indexOf("bread");
+		System.out.println((newList.length));
 		
-		//conditions for breadbread and breadxbread
+		//conditions
 		if (ingredients.indexOf("bread") == 0 && (ingredients.lastIndexOf("bread") + 5) == ingredients.length()){
-			if (newIngredients.length > 0){
-				for (String i : newIngredients){
+			if (newList.length > 0){
+				for (String i : newList){
 					System.out.print(i);
-				}
-			}else{
-				System.out.print("Not a sandwich!");
-			}
-		//conditions for xbreadbread and xbreadxbread
-		}else if (ingredients.indexOf("bread") != 0){
-			if ((ingredients.lastIndexOf("bread") + 5) == ingredients.length()){
-				if (newIngredients.length > 1){
-					????????newIngredients = newIngredients.substring(0, "bread");
-					for (String i : newIngredients){
-						
-						System.out.print(i);
-					}
-				}else{
-					System.out.print("Not a sandwich!");
 				}
 			}
 		}
 		
-		/*
-		}else if (ingredients.indexOf("bread") != 0 && (ingredients.lastIndexOf("bread") + 5) != ingredients.length()){
-			if (newIngredients.length > 2){
-				for (String i : newIngredients){
-					System.out.print(i);
-				}
-			}
-		}
+		
 		//Your task part 2:
 		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich
 		 * use String.split to split up the sandwich at the spaces, " ", and return what's in the middle of the sandwich and ignores what's on the outside
@@ -76,3 +53,4 @@ public class Split
 
 	}
 }
+

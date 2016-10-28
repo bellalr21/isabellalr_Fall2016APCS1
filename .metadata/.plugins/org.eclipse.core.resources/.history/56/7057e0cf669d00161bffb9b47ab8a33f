@@ -43,17 +43,14 @@ public class Split
 			}else{
 				System.out.print("Not a sandwich!");
 			}
-		//conditions for xbreadbread and xbreadxbread
 		}else if (ingredients.indexOf("bread") != 0){
 			if ((ingredients.lastIndexOf("bread") + 5) == ingredients.length()){
-				if (newIngredients.length > 1){
-					????????newIngredients = newIngredients.substring(0, "bread");
+				if (newIngredients.length <= 1){
+					System.out.print("Not a sandwich!");
+				}else{
 					for (String i : newIngredients){
-						
 						System.out.print(i);
 					}
-				}else{
-					System.out.print("Not a sandwich!");
 				}
 			}
 		}
@@ -76,3 +73,4 @@ public class Split
 
 	}
 }
+
