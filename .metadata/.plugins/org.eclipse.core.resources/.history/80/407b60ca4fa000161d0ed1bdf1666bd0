@@ -28,25 +28,11 @@ public class Split
 		//Asks user for ingredients
 		Scanner userInput = new Scanner(System.in);
 		System.out.println("Please list ingredients for a sandwich.");
-		String userIngredients = userInput.nextLine();
+		String ingredients = userInput.nextLine();
 		
 		//Splits list of ingredients to get outside and middle of sandwich. Also gets index of "bread". 
-		String [] notBread = userIngredients.split("bread");
-		String [] betweenBreads = new String [notBread.length-2];
-		int breadIndex = userIngredients.indexOf("bread");
-		
-		//Gets the inside ingredients if userIngredients is a sandwich
-		if (notBread.length > 0){
-			for(int i = 0; i < notBread.length - 2; i++){
-				betweenBreads[i] = notBread [i+1];
-			}
-			System.out.print(Arrays.toString(betweenBreads));
-		}
-		
-		//Prints "Not a sandwich if nothing between breads
-		if(Arrays.toString(notBread) == "[]"){
-			System.out.print("Not a sandwich.");
-		}
+		String [] newIngredients = ingredients.split("bread");
+		int breadIndex = ingredients.indexOf("bread");
 		
 		//conditions for breadbread and breadxbread
 		if (ingredients.indexOf("bread") == 0 && (ingredients.lastIndexOf("bread") + 5) == ingredients.length()){
