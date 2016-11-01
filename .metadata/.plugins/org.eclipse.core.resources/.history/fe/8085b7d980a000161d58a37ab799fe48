@@ -82,10 +82,8 @@ public class Split
 			}
 		}
 		
-		BREADBREAD-exception --> probs need if between == 0
 		BREAD-EXCEPTION LINE 35
 		RETURNS [cheeselettuce] instead of [cheese, lettuce]
-		breadlettucebreadcheesebread returns [lettuce]
 
 		//Your task part 2:
 		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich

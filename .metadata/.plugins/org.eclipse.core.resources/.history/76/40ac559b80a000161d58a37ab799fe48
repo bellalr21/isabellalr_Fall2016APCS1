@@ -35,6 +35,10 @@ public class Split
 		String [] betweenBreads = new String [notBread.length-2];
 		int breadIndex = userIngredients.indexOf("bread");
 		
+		if(userIngredients == "bread"){
+			System.out.print("Not a sandwich. Put ingredients.");
+		}
+		
 		//Prints "Not a sandwich if nothing between breads
 		if(Arrays.toString(betweenBreads) == "[]"){
 			System.out.print("Not a sandwich.");
@@ -81,17 +85,12 @@ public class Split
 				}
 			}
 		}
-		
-		BREADBREAD-exception --> probs need if between == 0
-		BREAD-EXCEPTION LINE 35
-		RETURNS [cheeselettuce] instead of [cheese, lettuce]
-		breadlettucebreadcheesebread returns [lettuce]
-
 		//Your task part 2:
 		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich
 		 * use String.split to split up the sandwich at the spaces, " ", and return what's in the middle of the sandwich and ignores what's on the outside
 		 * Again, what if it's a fancy sandwich with multiple pieces of bread?
 		*/
+
 		
 
 	}

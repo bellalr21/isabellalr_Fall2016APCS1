@@ -49,6 +49,9 @@ public class Split
 		}
 	
 		/*
+		 * XbreaadX Yes
+		 * 
+		 */
 		//conditions for breadbread and breadxbread
 		if (ingredients.indexOf("bread") == 0 && (ingredients.lastIndexOf("bread") + 5) == ingredients.length()){
 			if (newIngredients.length > 0){
@@ -81,17 +84,12 @@ public class Split
 				}
 			}
 		}
-		
-		BREADBREAD-exception --> probs need if between == 0
-		BREAD-EXCEPTION LINE 35
-		RETURNS [cheeselettuce] instead of [cheese, lettuce]
-		breadlettucebreadcheesebread returns [lettuce]
-
 		//Your task part 2:
 		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich
 		 * use String.split to split up the sandwich at the spaces, " ", and return what's in the middle of the sandwich and ignores what's on the outside
 		 * Again, what if it's a fancy sandwich with multiple pieces of bread?
 		*/
+
 		
 
 	}

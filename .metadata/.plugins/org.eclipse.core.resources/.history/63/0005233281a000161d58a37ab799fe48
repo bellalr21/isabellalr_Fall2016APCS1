@@ -82,7 +82,7 @@ public class Split
 			}
 		}
 		
-		BREADBREAD-exception --> probs need if between == 0
+		BREADBREAD-exception
 		BREAD-EXCEPTION LINE 35
 		RETURNS [cheeselettuce] instead of [cheese, lettuce]
 		breadlettucebreadcheesebread returns [lettuce]
