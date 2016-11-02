@@ -40,6 +40,7 @@ public class Split
 			}
 		}
 		
+		
 		/*
 		//Gets the inside Ingredients if userIngredients is a sandwich
 		else if(notBread.length > 2){

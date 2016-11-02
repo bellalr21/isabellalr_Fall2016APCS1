@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Split 
 {
-		public static void main(String[] args){
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);
 		//Where sp is the string where the string splits
@@ -14,10 +13,10 @@ public class Split
 		//		it will split at the word "really" and return an array of ["I "," like "," apples!"]
 		
 		//play around with String.split! what happens if you "I reallyreally like apples".split("really") ?
-		
+		/*
 		System.out.println(Arrays.toString("I like apples!".split(" ")));
 		System.out.println(Arrays.toString("I really like really red apples".split("really")));
-		}
+		
 		//Your task:
 		/*Write a method that take in a string like "applespineapplesbreadlettustomatobaconmayohambreadcheese" describing a sandwich
 		 * use String.split to split up the sandwich by the word "bread" and return what's in the middle of the sandwich and ignores what's on the outside
@@ -39,6 +38,7 @@ public class Split
 				System.out.print("Not a sandwich.");
 			}
 		}
+		
 		
 		/*
 		//Gets the inside Ingredients if userIngredients is a sandwich
