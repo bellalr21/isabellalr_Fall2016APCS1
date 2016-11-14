@@ -72,7 +72,11 @@ public class Calculate {
 	 * Makes a fraction into a mixed number.
 	 */
 	public static String toMixedNum(int x, int y){
-		return (x/y) +  "_" + (x%y) + "/" + y;
+		if(x%y == 0){
+			return (x/y) + "";
+		}else{
+			return (x/y) +  "_" + (x%y) + "/" + y;
+		}
 	}
 	
 	/*
