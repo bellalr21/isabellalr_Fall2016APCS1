@@ -262,8 +262,8 @@ public class Calculate {
 			firstRoot = answer1;
 			secondRoot = answer2;
 		}else{
-			firstRoot = answer2;
-			secondRoot = answer1;
+			firstRoot = Calculate.round2(answer2);
+			secondRoot = Calculate.round2(answer1);
 		}
 		return (firstRoot + " and " + secondRoot);
 	}

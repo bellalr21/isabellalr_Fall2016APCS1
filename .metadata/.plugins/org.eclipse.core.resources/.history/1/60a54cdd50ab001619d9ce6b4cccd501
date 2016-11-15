@@ -255,8 +255,8 @@ public class Calculate {
 			double num = (-1*b)/2*a;
 			return (String.format("%.2f", round2(num)) + "");
 		}else{
-			answer1 = Calculate.round2((-b + Math.sqrt(discrim))/(2*a));
-			answer2 = Calculate.round2((-b - Math.sqrt(discrim))/(2*a));
+			answer1 = (-b + Math.sqrt(discrim)/(2*a));
+			answer2 = (-b - Math.sqrt(discrim)/(2*a));
 		}
 		if(answer1 < answer2){
 			firstRoot = answer1;

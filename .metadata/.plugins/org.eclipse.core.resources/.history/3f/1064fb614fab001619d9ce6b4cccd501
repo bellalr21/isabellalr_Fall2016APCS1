@@ -246,25 +246,22 @@ public class Calculate {
 	
 		double firstRoot;
 		double secondRoot;
-		double answer1;
-		double answer2;
 		double discrim = Calculate.discriminant(a, b, c);
 		if(discrim < 0){
 			return("no real roots");
-		}else if (discrim == 0){
-			double num = (-1*b)/2*a;
-			return (String.format("%.2f", round2(num)) + "");
-		}else{
-			answer1 = Calculate.round2((-b + Math.sqrt(discrim))/(2*a));
-			answer2 = Calculate.round2((-b - Math.sqrt(discrim))/(2*a));
+		}else if (discrim >= 0){
+			double answer1 = Calculate.round2((-b + Math.sqrt(discrim))/(2*a));
+			double answer2 = Calculate.round2((-b - Math.sqrt(discrim))/(2*a));
+			if(answer1 < answer2){
+				firstRoot = answer1;
+				secondRoot = answer2;
+			}else{
+				firstRoot = answer2;
+				secondRoot = answer1;
+			}
+			return (firstRoot + " and " + secondRoot);
 		}
-		if(answer1 < answer2){
-			firstRoot = answer1;
-			secondRoot = answer2;
-		}else{
-			firstRoot = answer2;
-			secondRoot = answer1;
-		}
-		return (firstRoot + " and " + secondRoot);
+		return ("");
+		
 	}
 }
