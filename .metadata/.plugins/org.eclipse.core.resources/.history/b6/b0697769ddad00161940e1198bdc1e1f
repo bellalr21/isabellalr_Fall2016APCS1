@@ -16,8 +16,10 @@ public class Split
 	
 	//Asks user for ingredients
 	public static void stringSplitOne(String input) {
+		String userIngredients = input;
+		
 		//Splits list of ingredients to get outside and middle of sandwich. Also gets index of "bread". 
-			String [] notBread = input.split("bread");
+			String [] notBread = userInput.split("bread");
 			String [] ingredients = new String[notBread.length -2];
 			
 			if(notBread.length <= 2){
@@ -32,7 +34,6 @@ public class Split
 				}
 			}
 		}
-}
 		
 
 
