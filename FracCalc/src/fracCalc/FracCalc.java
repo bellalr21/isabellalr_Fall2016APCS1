@@ -1,11 +1,19 @@
 package fracCalc;
 
+import java.util.Scanner;
+
 public class FracCalc {
 
     public static void main(String[] args) 
     {
-        // TODO: Read the input from the user and call produceAnswer with an equation
-
+    // TODO: Read the input from the user and call produceAnswer with an equation
+    	String userInput = "";
+    	Scanner input = new Scanner(System.in); 
+    	while (userInput != "quit"){
+	    	System.out.println("Put in an arithmetic expression."); 
+	    	userInput = input.nextLine();
+	    	System.out.print(produceAnswer(userInput));
+    	}
     }
     
     // ** IMPORTANT ** DO NOT DELETE THIS FUNCTION.  This function will be used to test your code
@@ -16,13 +24,44 @@ public class FracCalc {
     //        
     // The function should return the result of the fraction after it has been calculated
     //      e.g. return ==> "1_1/4"
-    public static String produceAnswer(String input)
+    public static String produceAnswer(String x)
     { 
         // TODO: Implement this function to produce the solution to the input
-        
-        return "";
+    	String calculatorValue = x;
+    	String[] splitParts = calculatorValue.split(" "); 
+    	String firstOperand = splitParts[0];
+    	String operator = splitParts[1];
+    	String secondOperand = splitParts[2]; 
+    	int wholeNumber = 0;
+    	int numerator = 0;
+    	int denominator = 0;
+    	int wholeNumSymbol = secondOperand.indexOf("_");
+    	int fractionSymbol = secondOperand.indexOf("/");
+    	if(wholeNumSymbol == -1){
+    		if(fractionSymbol == -1){
+    			wholeNumber = 0;
+    			numerator = 0;
+    			denominator = 0;
+    		}
+    		if(fractionSymbol != -1){
+    			wholeNumber = 0;
+    			numerator = secondOperand.substring(wholeNumSymbol, fractionSymbol);
+    			denominator = secondOperand.substring(fractionSymbol, secondOperand.length() - 1);
+    		}
+    	}else{
+    		if(fractionSymbol == -1 && wholeNumSymbol != -1){
+    			wholeNumber = secondOperand.substring(0, wholeNumSymbol);
+    			numerator = 0;
+    			denominator = 0;
+    		}
+    	}
+    	System.out.print("whole:" + wholeNumber + " numerator:" + numerator + " denominator:" + denominator);
     }
-
     // TODO: Fill in the space below with any helper methods that you think you will need
+
+	private static int indexOf(String string) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
     
 }
