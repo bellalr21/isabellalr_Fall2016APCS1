@@ -39,7 +39,7 @@ public class FracCalc {
     	int fractionSymbol = secondOperand.indexOf("/");
     	if(wholeNumSymbol == -1){
     		if(fractionSymbol == -1){
-    			wholeNumber = secondOperand;
+    			wholeNumber = "0";
     			numerator = "0";
     			denominator = "1";
     		}

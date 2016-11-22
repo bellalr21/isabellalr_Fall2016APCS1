@@ -39,24 +39,24 @@ public class FracCalc {
     	int fractionSymbol = secondOperand.indexOf("/");
     	if(wholeNumSymbol == -1){
     		if(fractionSymbol == -1){
-    			wholeNumber = secondOperand;
+    			wholeNumber = "0";
     			numerator = "0";
-    			denominator = "1";
+    			denominator = "0";
     		}
     		if(fractionSymbol != -1){
     			wholeNumber = "0";
-    			numerator = secondOperand.substring(wholeNumSymbol+1, fractionSymbol);
-    			denominator = secondOperand.substring(fractionSymbol+1, secondOperand.length());
+    			numerator = secondOperand.substring(wholeNumSymbol, fractionSymbol);
+    			denominator = secondOperand.substring(fractionSymbol, secondOperand.length() - 1);
     		}
     	}
     	if(fractionSymbol == -1 && wholeNumSymbol != -1){
 			wholeNumber = secondOperand.substring(0, wholeNumSymbol);
 			numerator = "0";
-			denominator = "1";
+			denominator = "0";
     	}else{
     		wholeNumber = secondOperand.substring(0, wholeNumSymbol);
-    		numerator = secondOperand.substring(wholeNumSymbol+1, fractionSymbol);
-			denominator = secondOperand.substring(fractionSymbol+1, secondOperand.length());
+    		numerator = secondOperand.substring(wholeNumSymbol, fractionSymbol);
+			denominator = secondOperand.substring(fractionSymbol, secondOperand.length() - 1);
     	}
     	
     	return ("whole:" + wholeNumber + " numerator:" + numerator + " denominator:" + denominator);

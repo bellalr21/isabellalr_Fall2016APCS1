@@ -39,7 +39,7 @@ public class FracCalc {
     	int fractionSymbol = secondOperand.indexOf("/");
     	if(wholeNumSymbol == -1){
     		if(fractionSymbol == -1){
-    			wholeNumber = secondOperand;
+    			wholeNumber = "0";
     			numerator = "0";
     			denominator = "1";
     		}
@@ -54,7 +54,7 @@ public class FracCalc {
 			numerator = "0";
 			denominator = "1";
     	}else{
-    		wholeNumber = secondOperand.substring(0, wholeNumSymbol);
+    		wholeNumber = secondOperand;
     		numerator = secondOperand.substring(wholeNumSymbol+1, fractionSymbol);
 			denominator = secondOperand.substring(fractionSymbol+1, secondOperand.length());
     	}
