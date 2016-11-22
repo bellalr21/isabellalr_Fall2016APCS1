@@ -32,34 +32,30 @@ public class FracCalc {
     	String firstOperand = splitParts[0];
     	String operator = splitParts[1];
     	String secondOperand = splitParts[2]; 
-    	String wholeNumber = "0";
-    	String numerator = "0";
-    	String denominator = "0";
+    	int wholeNumber = 0;
+    	int numerator = 0;
+    	int denominator = 0;
     	int wholeNumSymbol = secondOperand.indexOf("_");
     	int fractionSymbol = secondOperand.indexOf("/");
     	if(wholeNumSymbol == -1){
     		if(fractionSymbol == -1){
-    			wholeNumber = "0";
-    			numerator = "0";
-    			denominator = "0";
+    			wholeNumber = 0;
+    			numerator = 0;
+    			denominator = 0;
     		}
     		if(fractionSymbol != -1){
-    			wholeNumber = "0";
+    			wholeNumber = 0;
     			numerator = secondOperand.substring(wholeNumSymbol, fractionSymbol);
     			denominator = secondOperand.substring(fractionSymbol, secondOperand.length() - 1);
     		}
-    	}
-    	if(fractionSymbol == -1 && wholeNumSymbol != -1){
-			wholeNumber = secondOperand.substring(0, wholeNumSymbol);
-			numerator = "0";
-			denominator = "0";
     	}else{
-    		wholeNumber = secondOperand.substring(0, wholeNumSymbol);
-    		numerator = secondOperand.substring(wholeNumSymbol, fractionSymbol);
-			denominator = secondOperand.substring(fractionSymbol, secondOperand.length() - 1);
+    		if(fractionSymbol == -1 && wholeNumSymbol != -1){
+    			wholeNumber = secondOperand.substring(0, wholeNumSymbol);
+    			numerator = 0;
+    			denominator = 0;
+    		}
     	}
-    	
-    	return ("whole:" + wholeNumber + " numerator:" + numerator + " denominator:" + denominator);
+    	System.out.print("whole:" + wholeNumber + " numerator:" + numerator + " denominator:" + denominator);
     }
     // TODO: Fill in the space below with any helper methods that you think you will need
 

@@ -48,17 +48,13 @@ public class FracCalc {
     			numerator = secondOperand.substring(wholeNumSymbol, fractionSymbol);
     			denominator = secondOperand.substring(fractionSymbol, secondOperand.length() - 1);
     		}
-    	}
-    	if(fractionSymbol == -1 && wholeNumSymbol != -1){
-			wholeNumber = secondOperand.substring(0, wholeNumSymbol);
-			numerator = "0";
-			denominator = "0";
     	}else{
-    		wholeNumber = secondOperand.substring(0, wholeNumSymbol);
-    		numerator = secondOperand.substring(wholeNumSymbol, fractionSymbol);
-			denominator = secondOperand.substring(fractionSymbol, secondOperand.length() - 1);
+    		if(fractionSymbol == -1 && wholeNumSymbol != -1){
+    			wholeNumber = secondOperand.substring(0, wholeNumSymbol);
+    			numerator = "0";
+    			denominator = "0";
+    		}
     	}
-    	
     	return ("whole:" + wholeNumber + " numerator:" + numerator + " denominator:" + denominator);
     }
     // TODO: Fill in the space below with any helper methods that you think you will need
